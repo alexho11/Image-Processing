@@ -19,12 +19,17 @@ for i in range(img.shape[0]):
 # plot the histogram
 plt.figure()
 plt.stairs(hist) 
+plt.xlabel('Intensity')
+plt.ylabel('Count')
 # save the plot
 #plt.savefig('histogram.png')
 # check the histogram
 plt.figure()
 plt.stem(range(256), hist)  # Using plt.stem() instead of plt.hist()
 plt.xlim([0,256])
+plt.title('Histogram of the image')
+plt.xlabel('Intensity')
+plt.ylabel('Count')
 # save the plot
 #plt.savefig('histogram_check.png')
 
@@ -72,6 +77,7 @@ def testImage(img):
 
 # load the images
 test_img=['images/image_a.bmp', 'images/image_b.bmp', 'images/image_c.bmp', 'images/image_d.bmp']
+a=['a', 'b', 'c', 'd']
 for i in range(len(test_img)):
     img_t = plt.imread(test_img[i])
     hist, mean, var, std = testImage(img_t)
@@ -82,6 +88,9 @@ for i in range(len(test_img)):
     plt.figure()
     plt.stem(range(256), hist)
     plt.xlim([0,256])
+    plt.title('Histogram of the image '+a[i])
+    plt.xlabel('Intensity')
+    plt.ylabel('Count')
     #plt.savefig('histogram_check'+str(i)+'.png')
 for i in range(len(test_img)):
     img_t = plt.imread(test_img[i])
@@ -106,7 +115,12 @@ for i in range(len(temp_list)):
     plt.figure()
     plt.imshow(IP.correlation(query, temp))
     plt.scatter(position[1], position[0], color='r') 
-    #plt.savefig('correlation'+alphabet[i]+'.png')
-
+    plt.title('Correlation of the query and template'+alphabet[i])
+    plt.savefig('correlation'+alphabet[i]+'.png')
+    plt.figure()
+    plt.imshow(query)
+    plt.scatter(position[1], position[0], color='r')
+    plt.title('Query with the template'+alphabet[i])
+    plt.savefig('query'+alphabet[i]+'.png')
 
 plt.show()
