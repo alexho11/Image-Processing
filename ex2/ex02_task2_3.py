@@ -6,7 +6,7 @@ import numpy as np
 
 def median(listValues):
     median_value = 0.0
-    if len(listValues) == 2:
+    if len(listValues)%2 == 0:
         raise ValueError('Number of values must be odd')
     else:
         sorted_listValues = np.sort(listValues)

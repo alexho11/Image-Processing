@@ -107,11 +107,11 @@ In the first part of this exercise we have to implement the functions $median$ i
 \begin{lstlisting}
     def median(listValues):
     median_value = 0.0
-    if len(listValues) == 2:
+    if len(listValues)%2 == 0:
         raise ValueError('Number of values must be odd')
     else:
-        listValues.sort()
-        median_value = listValues[int(len(listValues)/2)]
+        sorted_listValues = np.sort(listValues)
+        median_value = sorted_listValues[int(len(listValues)/2)]
     return median_value
 \end{lstlisting}
 And we have to calculate the mean and median for the following list of values: [19.7, 556.3, 23.2, 27.5, 16.3, 21.0, 27.2, 495.0, 25.3]. The results are shown in the following code.

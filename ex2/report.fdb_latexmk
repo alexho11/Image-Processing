@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1701718873 "/Users/alex/Documents/TUM/Image-Processing/ex2/report.tex" "report.pdf" "report" 1701718875 0
-  "/Users/alex/Documents/TUM/Image-Processing/ex2/report.tex" 1701718873 8657 fd7a576587c7fc984cb9fcd8a7167a90 ""
+["pdflatex"] 1702021674 "/Users/alex/Documents/TUM/Image-Processing/ex2/report.tex" "report.pdf" "report" 1702021675 0
+  "/Users/alex/Documents/TUM/Image-Processing/ex2/report.tex" 1702021672 8688 4cad41d810b99d0cf5be2df88398a34e ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm" 1136768653 3584 291a5713401683441e0a8c8f4417b17b ""
@@ -155,11 +155,11 @@
   "ex02_task1.py" 1701459113 3455 5a4c638c5005eb37e7430da8b9c5e430 ""
   "ex02_task1_1.png" 1701434032 355996 67bb74a3d144b40a31178a9df40b579a ""
   "ex02_task1_2.png" 1701434032 383366 76be8f7e5cd70f34920463cada6db116 ""
-  "ex02_task2_3.py" 1701509347 4932 e485e3b01edbd714e7a28ae698ecf81d ""
+  "ex02_task2_3.py" 1702021619 4934 42a1c403803df4ee1e864b3bcb578e44 ""
   "laplace.png" 1701509333 254010 0cd8ed761c64e384d9e8291c663c55ef ""
-  "report.aux" 1701718875 3602 8ded9eba388803fd14f45b67f62472e9 "pdflatex"
-  "report.out" 1701718874 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "report.tex" 1701718873 8657 fd7a576587c7fc984cb9fcd8a7167a90 ""
+  "report.aux" 1702021675 3602 8ded9eba388803fd14f45b67f62472e9 "pdflatex"
+  "report.out" 1702021674 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "report.tex" 1702021672 8688 4cad41d810b99d0cf5be2df88398a34e ""
   "sobel.png" 1701509332 207908 633cf4f612a5181dddcf2385b84afd6b ""
   (generated)
   "report.aux"
