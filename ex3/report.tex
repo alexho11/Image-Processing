@@ -1,0 +1,112 @@
+\documentclass[12pt
+,headinclude
+,headsepline
+,bibtotocnumbered
+]{scrartcl}
+\usepackage[paper=a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry} 
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fancyvrb}  % Add this line
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pdfpages}
+%\usepackage{wrapfig}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{flafter}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{epstopdf}
+\usepackage[miktex]{gnuplottex}
+\usepackage[T1]{fontenc}
+\usepackage{mhchem}
+\usepackage{fancyhdr}
+%\setlength{\mathindent}{0pt}
+\usepackage{amssymb}
+\usepackage[list=true, font=large, labelfont=bf, 
+labelformat=brace, position=top]{subcaption}
+\setlength{\parindent}{0mm}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+	language=Python,                % the language of the code
+	basicstyle=\small\ttfamily,     % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line will be numbered
+	numbersep=5pt,                  % how far the line-numbers are from the code
+	backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+	tabsize=2,                      % sets default tabsize to 2 spaces
+	captionpos=b,                   % sets the caption-position to bottom
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=true,         % sets if automatic breaks should only happen at whitespace
+	title=\lstname,                 % show the filename of files included with \lstinputlisting; also try caption instead of title
+	keywordstyle=\color{blue},      % keyword style
+	commentstyle=\color{dkgreen},   % comment style
+	stringstyle=\color{mauve},      % string literal style
+	escapeinside={\%*}{*)},         % if you want to add LaTeX within your code
+	morekeywords={*,...}            % if you want to add more keywords to the set
+}
+
+\setlength{\parindent}{0mm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{PRE-T\\ Exercise 3: Hough Transformation}
+\rhead{Hsin-Feng Ho \\03770686}
+\rfoot{Page \thepage}	
+\begin{document}
+\section*{Hough Transformation}
+The Hough Transform is a feature extraction technique used in image analysis. The purpose of the technique is to find objects in an image by recognizing the shape of the objects. A common use case is the recognition of lines in an image, for example to recognize a road lane in a picture taken by a camera mounted on a car.
+\\\\ In this first task are 4 test images given and we have to perform the Hough Transformation on them. The idea of the Hough Transformation is to transform the image from the Cartesian coordinate system to the Hough space. In the Hough space, the lines are represented by a point. The point is the intersection of the lines in the Cartesian coordinate system. The Hough space is a 2D space with the $d$ and $\alpha$ axis. The $d$ axis is the distance from the origin to the line and the $\alpha$ axis is the angle between the x-axis and the line. The Hough Transformation is a mapping from the Cartesian coordinate system to the Hough space. The mapping is done by the following formula:
+\begin{equation*}
+d = x \cdot \cos(\alpha) + y \cdot \sin(\alpha)
+\end{equation*}
+Each point in the image votes for all the lines that could pass through it in the parameter space (Hough space). The accumulator space (a 2D array for lines) tallies votes for each potential line. The results are shown in Figure \ref{fig:1}.
+\\\\ We can observe the detection of the points in the hough space is represented as a local maximum, which the parameter set with the most votes. We can see this clearly in the 4th example with 2 peaks in the parameter sapce, which represented each of the line. The Hough Transformation is a very useful tool for detecting lines in an image. However, it is not very efficient. The Hough Transformation is a very expensive operation. The complexity of the Hough Transformation is $O(n^2)$, where $n$ is the number of points in the image. The Hough Transformation is also very sensitive to noise. The noise in the image can cause the Hough Transformation to detect lines that are not in the image. We can see this in the 3rd example, where are several maximum in the parameter space.
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=0.8\textwidth]{plots/test1.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.25\textwidth]{plots/test1_hough.png}
+    \end{subfigure}
+    \\
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=0.8\textwidth]{plots/test2.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.25\textwidth]{plots/test2_hough.png}
+    \end{subfigure}
+    \\
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=0.8\textwidth]{plots/test3.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.25\textwidth]{plots/test3_hough.png}
+    \end{subfigure}\\
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=0.8\textwidth]{plots/test4.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=1.25\textwidth]{plots/test4_hough.png}
+    \end{subfigure}
+    \caption{Captions for the whole figure}
+    \label{fig:1}
+\end{figure}
+\end{document}
