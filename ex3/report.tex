@@ -67,13 +67,13 @@ labelformat=brace, position=top]{subcaption}
 \rfoot{Page \thepage}	
 \begin{document}
 \section*{Hough Transformation}
-The Hough Transform is a feature extraction technique used in image analysis. The purpose of the technique is to find objects in an image by recognizing the shape of the objects. A common use case is the recognition of lines in an image, for example to recognize a road lane in a picture taken by a camera mounted on a car.
+The Hough Transform is an image analysis technique for object detection, identifying shapes within images. A common use case is the recognition of lines in an image, for example to recognize a road lane in a picture taken by a camera mounted on a car.
 \\\\ In this first task are 4 test images given and we have to perform the Hough Transformation on them. The idea of the Hough Transformation is to transform the image from the Cartesian coordinate system to the Hough space. In the Hough space, the lines are represented by a point. The point is the intersection of the lines in the Cartesian coordinate system. The Hough space is a 2D space with the $d$ and $\alpha$ axis. The $d$ axis is the distance from the origin to the line and the $\alpha$ axis is the angle between the x-axis and the line. The Hough Transformation is a mapping from the Cartesian coordinate system to the Hough space. The mapping is done by the following formula:
 \begin{equation*}
 d = x \cdot \cos(\alpha) + y \cdot \sin(\alpha)
 \end{equation*}
 Each point in the image votes for all the lines that could pass through it in the parameter space (Hough space). The accumulator space (a 2D array for lines) tallies votes for each potential line. The results are shown in Figure \ref{fig:1}.
-\\\\ We can observe the detection of the points in the hough space is represented as a local maximum, which the parameter set with the most votes. We can see this clearly in the 4th example with 2 peaks in the parameter sapce, which represented each of the line. The Hough Transformation is a very useful tool for detecting lines in an image. However, it is not very efficient. The Hough Transformation is a very expensive operation. The complexity of the Hough Transformation is $O(n^2)$, where $n$ is the number of points in the image. The Hough Transformation is also very sensitive to noise. The noise in the image can cause the Hough Transformation to detect lines that are not in the image. We can see this in the 3rd example, where are several maximum in the parameter space.
+\\\\ We can observe the detection of the points in the hough space is represented as a local maximum, which the parameter set with the most votes. We can see this clearly in the 4th example with 2 peaks in the parameter space, which represented each of the line. The Hough Transformation is a very useful tool for detecting lines in an image. However, it is not very efficient. The Hough Transformation is a very expensive operation. The complexity of the Hough Transformation is $O(n^2)$, where $n$ is the number of points in the image. The Hough Transformation is also very sensitive to noise. The noise in the image can cause the Hough Transformation to detect lines that are not in the image. We can see this in the 3rd example, where are several maximum in the parameter space.
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.45\textwidth}
@@ -110,7 +110,7 @@ Each point in the image votes for all the lines that could pass through it in th
     }
     \label{fig:1}
 \end{figure}
-To validate the results of the Hough Transformation, we can reproject the line in the image. The reprojected lines are shown in Figure \ref{fig:2}. We can see that the lines are detected correctly.
+Validation of the Hough Transformation results is achieved by reprojecting the detected lines onto the image. The reprojected lines are shown in Figure \ref{fig:2}. We can see that the lines are detected correctly.
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.45\textwidth}
@@ -144,57 +144,57 @@ In this task we have to detect the lines in the image using the Sobel operator. 
     \caption{Results of Sobel operator}
     \label{fig:3}
 \end{figure}
-After applying the Sobel operator, we can use non maximum suppression to find the local maximum in the image. The results are shown in Figure \ref{fig:4}. We can see kernal size of the non maximum suppression is very important. If the kernal size is too small, the non maximum suppression will be sensitive to noise. If the kernal size is too large, we might lose too much detail in the image.  
+After applying the Sobel operator, we can use non maximum suppression to find the local maximum in the image. The results are shown in Figure \ref{fig:4}. We can see kernel size of the non maximum suppression is very important. If the kernel size is too small, the non maximum suppression will be sensitive to noise. If the kernel size is too large, we might lose too much detail in the image.  
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=1\textwidth]{plots/edges_4.png}
-        \caption*{Kernal size = 4}
+        \caption*{kernel size = 4}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=1\textwidth]{plots/edges_10.png}
-        \caption*{Kernal size = 10}
+        \caption*{kernel size = 10}
     \end{subfigure}
     \\
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=1\textwidth]{plots/edges_20.png}
-        \caption*{Kernal size = 20}
+        \caption*{kernel size = 20}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=1\textwidth]{plots/edges_30.png}
-        \caption*{Kernal size = 30}
+        \caption*{kernel size = 30}
     \end{subfigure}
     \caption{Results of non maximum suppression}
     \label{fig:4}
 \end{figure}
-Now we can apply the Hough Transformation on the edges. We also have to tune the parameter of threshold and kernal size of the non maximum suppression. The results are shown in Figure \ref{fig:5}.
+Now we can apply the Hough Transformation on the edges. We also have to tune the parameter of threshold and kernel size of the non maximum suppression. The results are shown in Figure \ref{fig:5}.
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=1\textwidth]{plots/houghlines_4_100.png}
-        \caption*{Kernal size = 4, threshold = 100}
+        \caption*{kernel size = 4, threshold = 100}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=1\textwidth]{plots/houghlines_10_100.png}
-        \caption*{Kernal size = 10, threshold = 100}
+        \caption*{kernel size = 10, threshold = 100}
     \end{subfigure}
     \\
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=1\textwidth]{plots/houghlines_20_80.png}
-        \caption*{Kernal size = 20, threshold = 80}
+        \caption*{kernel size = 20, threshold = 80}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=1\textwidth]{plots/houghlines_25_40.png}
-        \caption*{Kernal size = 25, threshold = 40}
+        \caption*{kernel size = 25, threshold = 40}
     \end{subfigure}
     \caption{Results of Hough Transformation}
     \label{fig:5}
 \end{figure}
-We can see that the Hough Transformation is very sensitive to the parameter of the non maximum suppression. If the kernal size is too small, the Hough Transformation will detect too many lines. If the kernal size is too large, the Hough Transformation will not detect enough lines. The threshold is also very important. If the threshold is too small, the Hough Transformation will detect too many lines. If the threshold is too large, the Hough Transformation will not detect enough lines. In this example, the best result is achieved with a kernal size of 20 and a threshold of 80. It's able to detect 3 lines in the given building image. 
+We can see that the Hough Transformation is very sensitive to the parameter of the non maximum suppression. If the kernel size is too small, the Hough Transformation will detect too many lines. If the kernel size is too large, the Hough Transformation will not detect enough lines. The threshold is also very important. If the threshold is too small, the Hough Transformation will detect too many lines. If the threshold is too large, the Hough Transformation will not detect enough lines. In this example, the best result is achieved with a kernel size of 20 and a threshold of 80. It's able to detect 3 lines in the given building image. 
 \newpage
 \section*{Code}
 \lstinputlisting[language=Python]{code/task1.py}

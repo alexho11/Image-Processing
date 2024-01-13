@@ -1,6 +1,7 @@
 import numpy as np
 import cv2 as cv
 def hough_lines_accumulator(edges):
+    # Implement a Hough transform that takes in an edge image and outputs a Hough
     height, width = edges.shape
     max_d = int(np.sqrt(height**2 + width**2))
     d = np.arange(-max_d, max_d, 1)
@@ -20,6 +21,7 @@ def hough_lines_accumulator(edges):
     return accumulator, alpha, d
 
 def hough_peaks(accumulator, num_peaks, threshold=100):
+    # Sort the accumulator to find the maxima
     peaks = []
     for _ in range(num_peaks):
         idx = np.argmax(accumulator)
