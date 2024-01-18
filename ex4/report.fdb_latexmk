@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1705238082 "/Users/alex/Documents/TUM/Image-Processing/ex4/report.tex" "report.pdf" "report" 1705238083 0
-  "/Users/alex/Documents/TUM/Image-Processing/ex4/report.tex" 1705238082 10011 9507cf355baae564bd974db10f9bf7ac ""
+["pdflatex"] 1705598974 "/Users/alex/Documents/TUM/Image-Processing/ex4/report.tex" "report.pdf" "report" 1705598975 0
+  "/Users/alex/Documents/TUM/Image-Processing/ex4/report.tex" 1705598974 11488 96238924438b2d7434e8c2d9fb096c0f ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -172,11 +172,12 @@
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
   "plots/test.png" 1705223722 354999 59fb3107bac5d832391cff4e5e53296f ""
   "plots/test_result.png" 1705233676 358895 69be53d525ace9d97467654dcef1b6b7 ""
+  "plots/test_result_rgb.png" 1705597156 341247 740f9edfdc18b09ffc5f2fd199f3f24c ""
   "plots/train.png" 1705180386 247001 a54ec828e22706506229b3b5d3d70554 ""
   "plots/train_result.png" 1705223721 204944 005c2e3cbc071717e5493f36e6679e25 ""
-  "report.aux" 1705238083 701 4ea67cf0b07b2e842ab8668e47d4660b "pdflatex"
-  "report.out" 1705238083 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "report.tex" 1705238082 10011 9507cf355baae564bd974db10f9bf7ac ""
+  "report.aux" 1705598975 701 09fe2e6b4af0f18692147929ace94129 "pdflatex"
+  "report.out" 1705598975 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "report.tex" 1705598974 11488 96238924438b2d7434e8c2d9fb096c0f ""
   (generated)
   "report.aux"
   "report.log"

@@ -1159,6 +1159,11 @@ INPUT plots/test_result.png
 INPUT ./plots/test_result.png
 INPUT ./plots/test_result.png
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
+INPUT ./plots/test_result_rgb.png
+INPUT ./plots/test_result_rgb.png
+INPUT plots/test_result_rgb.png
+INPUT ./plots/test_result_rgb.png
+INPUT ./plots/test_result_rgb.png
 INPUT report.aux
 INPUT ./report.out
 INPUT ./report.out

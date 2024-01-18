@@ -140,7 +140,7 @@ There are several accuracies which can be calculated from the confusion matrix. 
     \hline
     \end{tabular}}
 \end{table}
-From the user's accuracy, we can see that the snow and rock classes are classified very well. The forest, vegetation, ice classes are classified quite well. The accuracies of water and shadow are just over 50\%.
+From the user's accuracy, we can see that the snow and rock classes are classified very well. The forest, vegetation, ice classes are classified quite well. The accuracies of water and shadow are just over 50\%. We achieve an overall accuracy of 76.9\%. 
 \subsection*{Kappa coefficient}
 The kappa coefficient is a measure of the agreement between the predicted class and the true class. The kappa coefficient is defined as
 \begin{equation*}
@@ -151,4 +151,36 @@ where $p_o$ is the observed agreement, $p_e$ is the expected agreement, $n$ is t
     Kappa coefficient:  0.6967297666414108
 \end{verbatim}
 The result of kappa coefficient is 0.6967. The kappa coefficient is between 0 and 1. The kappa coefficient is 1 if the predicted class is the same as the true class. The kappa coefficient is 0 if the predicted class is the same as the true class by chance. The kappa coefficient is negative if the predicted class is worse than the true class. Therefore, we can say that our classifier is much better than random guessing.
+\section*{Train only on RGB channels}
+Now we want to train our classifier only on the RGB channels. We want to see if the infrared channels are important for the classification.
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{plots/test_result_rgb.png}
+\end{figure}
+\begin{table}[H]
+    \renewcommand\arraystretch{1.5}
+    \setlength{\tabcolsep}{0.7mm}{
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        \multicolumn{2}{|c|}{\multirow{2}{*}{Class}}&\multicolumn{7}{c}{Reference data}&&Accuracy\\\cline{3-11}
+        \multicolumn{2}{|c|}{}&Water&Forest&Vegetation&Ice&Snow&Rock&Shadow&Total&User's\\
+    \hline
+    \multirow{7}{*}{Predict}&Water&\textbf{349}&345&112&0&0&1119&0&1925&0.181\\
+    \cline{2-11}
+    &Forest&6&\textbf{100562}&12576&0&0&172&0&113316&0.887\\
+    \cline{2-11}
+    &Vegetation&9&29693&\textbf{92876}&0&0&6838&0&129416&0.718\\
+    \cline{2-11}
+    &Ice&5&2771&7041&\textbf{9826}&9467&23693&0&52803&0.186\\
+    \cline{2-11}
+    &Snow&2&1338&3815&2868&\textbf{70922}&9615&0&88560&0.801\\
+    \cline{2-11}
+    &Rock&1&6854&33914&5716&4546&\textbf{77753}&6&128790&0.604\\
+    \cline{2-11}
+    &Shadow&0&30079&5670&0&0&524&\textbf{21}&36294&5.786$\cdot 10^{-4}$\\\cline{2-11}
+    &Total&372&171642&156004 &18410 &84935&119714& 27&\textbf{551104}&\\\hline
+    Accuracy&Producer's&0.938&0.586&0.595&0.534&0.835&0.650&0.778&&\textbf{0.639}\\
+    \hline
+    \end{tabular}}
+\end{table}
 \end{document}
