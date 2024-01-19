@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.6)  18 JAN 2024 18:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.12)  19 JAN 2024 08:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -504,9 +504,9 @@ Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
 )
 \verbatim@out=\write4
-runsystem(echo t > "w18-test-20241181109.tex")...disabled (restricted).
+runsystem(echo t > "w18-test-2024119535.tex")...disabled (restricted).
 
-runsystem(del "w18-test-20241181109.tex")...disabled (restricted).
+runsystem(del "w18-test-2024119535.tex")...disabled (restricted).
 
 
 
@@ -646,7 +646,8 @@ File: listings.cfg 2023/02/27 1.9 listings configuration
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
  (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) (./report.aux)
+)
+No file report.aux.
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
@@ -676,7 +677,6 @@ Package scrbase Info: activating english \listfigurename on input line 68.
 Package scrbase Info: activating english \listtablename on input line 68.
 Package scrbase Info: activating english \refname on input line 68.
 Package scrbase Info: activating english \indexname on input line 68.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -734,7 +734,6 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 Package hyperref Info: Link coloring OFF on input line 68.
- (./report.out) (./report.out)
 \@outlinefile=\write5
 \openout5 = `report.out'.
 
@@ -824,12 +823,12 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.98969pt}.
 
 [3 <./plots/test.png>]
-Overfull \hbox (42.08727pt too wide) in paragraph at lines 120--142
+Overfull \hbox (42.08727pt too wide) in paragraph at lines 121--143
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--142
+Underfull \hbox (badness 10000) in paragraph at lines 115--143
 
  []
 
@@ -844,10 +843,18 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 <plots/test_result_rgb.png, id=62, 462.528pt x 346.896pt>
 File: plots/test_result_rgb.png Graphic file (type png)
 <use plots/test_result_rgb.png>
-Package pdftex.def Info: plots/test_result_rgb.png  used on input line 158.
-(pdftex.def)             Requested size: 455.24411pt x 341.44843pt.
+Package pdftex.def Info: plots/test_result_rgb.png  used on input line 159.
+(pdftex.def)             Requested size: 409.71692pt x 307.302pt.
 
-Overfull \hbox (48.85327pt too wide) in paragraph at lines 163--185
+
+Package fancyhdr Warning: \headheight is too small (18.125pt): 
+(fancyhdr)                Make it at least 27.11469pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11469pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-8.98969pt}.
+
+[5]
+Overfull \hbox (48.85327pt too wide) in paragraph at lines 165--187
 [][] 
  []
 
@@ -858,7 +865,247 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-8.98969pt}.
 
-[5]
+[6 <./plots/test_result_rgb.png>] (./ex04_classification.py
+
+./ex04_classification.py:4: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 1 0.45-0.52 µm,
+                     blue-green
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+./ex04_classification.py:4: LaTeX Error: Invalid UTF-8 byte "B5.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 1 0.45-0.52 µm,
+                     blue-green
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+./ex04_classification.py:5: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 2 0.52-0.60 µm,
+                     green
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+./ex04_classification.py:5: LaTeX Error: Invalid UTF-8 byte "B5.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 2 0.52-0.60 µm,
+                     green
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+./ex04_classification.py:6: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 3 0.63-0.69 µm,
+                     red
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+./ex04_classification.py:6: LaTeX Error: Invalid UTF-8 byte "B5.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 3 0.63-0.69 µm,
+                     red
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+./ex04_classification.py:7: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 4 0.76-0.90 µm,
+                     near infrared
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+./ex04_classification.py:7: LaTeX Error: Invalid UTF-8 byte "B5.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 4 0.76-0.90 µm,
+                     near infrared
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+./ex04_classification.py:8: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 5 1.55-1.75 µm,
+                     mid infrared
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+./ex04_classification.py:8: LaTeX Error: Invalid UTF-8 byte "B5.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 5 1.55-1.75 µm,
+                     mid infrared
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+./ex04_classification.py:9: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 6 10.4-12.5 µm 
+                    (60 × 60 m) Thermal channel
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+./ex04_classification.py:9: LaTeX Error: Invalid UTF-8 byte "B5.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 6 10.4-12.5 µm 
+                    (60 × 60 m) Thermal channel
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+./ex04_classification.py:9: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 6 10.4-12.5 µm (60 × 
+                           60 m) Thermal channel
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+./ex04_classification.py:9: LaTeX Error: Invalid UTF-8 byte "97.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 6 10.4-12.5 µm (60 × 
+                           60 m) Thermal channel
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+./ex04_classification.py:10: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 7 2.08-2.35 µm,
+                      mid infrared
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+./ex04_classification.py:10: LaTeX Error: Invalid UTF-8 byte "B5.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 7 2.08-2.35 µm,
+                      mid infrared
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
 
 Package fancyhdr Warning: \headheight is too small (18.125pt): 
 (fancyhdr)                Make it at least 27.11469pt, for example:
@@ -866,23 +1113,94 @@ Package fancyhdr Warning: \headheight is too small (18.125pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-8.98969pt}.
 
-[6 <./plots/test_result_rgb.png>] (./report.aux)
-Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+[7]
+
+Package fancyhdr Warning: \headheight is too small (18.125pt): 
+(fancyhdr)                Make it at least 27.11469pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11469pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-8.98969pt}.
+
+[8]
+Overfull \hbox (40.4332pt too wide) in paragraph at lines 112--113
+[][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (74.3837pt too wide) in paragraph at lines 124--125
+[][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (74.3837pt too wide) in paragraph at lines 125--127
+[][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (60.8035pt too wide) in paragraph at lines 128--129
+[][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (26.853pt too wide) in paragraph at lines 129--130
+[][][][][][][][][][][][][]  
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (18.125pt): 
+(fancyhdr)                Make it at least 27.11469pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11469pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-8.98969pt}.
+
+[9]
+Overfull \hbox (19.6926pt too wide) in paragraph at lines 174--175
+[][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (6.1124pt too wide) in paragraph at lines 176--177
+[][][][][][][][][][][][][]  
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (18.125pt): 
+(fancyhdr)                Make it at least 27.11469pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11469pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-8.98969pt}.
+
+[10])
+
+Package fancyhdr Warning: \headheight is too small (18.125pt): 
+(fancyhdr)                Make it at least 27.11469pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11469pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-8.98969pt}.
+
+[11] (./report.aux)
+
+Package rerunfilecheck Warning: File `report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `report.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 21426 strings out of 476025
- 377934 string characters out of 5790018
- 1887388 words of memory out of 5000000
- 41517 multiletter control sequences out of 15000+600000
+ 21716 strings out of 476025
+ 382278 string characters out of 5790017
+ 2010388 words of memory out of 5000000
+ 41590 multiletter control sequences out of 15000+600000
  526479 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,12n,106p,10726b,1301s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,12n,106p,10726b,2132s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on report.pdf (6 pages, 1602866 bytes).
+Output written on report.pdf (11 pages, 1642733 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
+ 446 PDF objects out of 1000 (max. 8388607)
+ 383 compressed objects within 4 object streams
+ 247 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

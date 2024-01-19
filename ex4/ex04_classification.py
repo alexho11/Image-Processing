@@ -96,15 +96,19 @@ for ii in range(0,7):
     testdata[:,:,ii] = I
 
 # flatten the train data and labels
-X_train = traindata.reshape(traindata.shape[0]*traindata.shape[1],traindata.shape[2])
-y_train = img_label_train.reshape(img_label_train.shape[0]*img_label_train.shape[1])
+X_train = traindata.reshape(traindata.shape[0]*traindata.shape[1],
+                            traindata.shape[2])
+
+y_train = img_label_train.reshape(img_label_train.shape[0]
+                                  *img_label_train.shape[1])
 
 clf=GaussianNB()
 clf.fit(X_train,y_train)
 y_pred=clf.predict(X_train)
 print('Accuracy on training data: ', np.mean(y_pred==y_train))
 
-img_label_train_pred=y_pred.reshape(img_label_train.shape[0],img_label_train.shape[1])
+img_label_train_pred=y_pred.reshape(img_label_train.shape[0],
+                                    img_label_train.shape[1])
 img_label_train_pred_color=label2rgb(img_label_train_pred,label_to_color)
 plt.figure()
 plt.subplot(122)
@@ -167,13 +171,17 @@ plt.title('Label of test data')
 # plt.savefig('plots/test_result.png')
 
 # predict only use rgb chanels
-X_train_rgb = img_rgb_train.reshape(img_rgb_train.shape[0]*img_rgb_train.shape[1],img_rgb_train.shape[2])
-X_test_rgb = img_rgb_test.reshape(img_rgb_test.shape[0]*img_rgb_test.shape[1],img_rgb_test.shape[2])
+X_train_rgb = img_rgb_train.reshape(img_rgb_train.shape[0]*img_rgb_train.shape[1]
+                                    ,img_rgb_train.shape[2])
+X_test_rgb = img_rgb_test.reshape(img_rgb_test.shape[0]*img_rgb_test.shape[1],
+                                  img_rgb_test.shape[2])
 clf_rgb=GaussianNB()
 clf_rgb.fit(X_train_rgb,y_train)
 y_pred_rgb=clf_rgb.predict(X_test_rgb)
-img_label_test_pred_rgb=y_pred_rgb.reshape(img_rgb_test.shape[0],img_rgb_test.shape[1])
-img_label_test_pred_color_rgb=label2rgb(img_label_test_pred_rgb,label_to_color)
+img_label_test_pred_rgb=y_pred_rgb.reshape(img_rgb_test.shape[0],
+                                           img_rgb_test.shape[1])
+img_label_test_pred_color_rgb=label2rgb(img_label_test_pred_rgb,
+                                        label_to_color)
 plt.figure()
 plt.subplot(122)
 plt.imshow(img_label_test_pred_color_rgb)
